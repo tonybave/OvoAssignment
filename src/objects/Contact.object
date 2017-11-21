@@ -137,6 +137,28 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Gender__c</fullName>
+        <description>Gender</description>
+        <externalId>false</externalId>
+        <label>Gender</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Male</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Female</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>HasOptedOutOfEmail</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -199,6 +221,34 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Loyalty_Status__c</fullName>
+        <defaultValue>&quot;Standard&quot;</defaultValue>
+        <description>Loyalty status determined from Our Friends service</description>
+        <externalId>false</externalId>
+        <label>Loyalty Status</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Friendly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unfriendly</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>MailingAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -217,6 +267,18 @@
     <fields>
         <fullName>OtherPhone</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Our_Friends_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id from Our Friends service</description>
+        <externalId>true</externalId>
+        <label>Our Friends Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -239,6 +301,9 @@
     <listViews>
         <fullName>AllContacts</fullName>
         <columns>FULL_NAME</columns>
+        <columns>Gender__c</columns>
+        <columns>Loyalty_Status__c</columns>
+        <columns>Our_Friends_Id__c</columns>
         <columns>ACCOUNT.NAME</columns>
         <columns>CONTACT.TITLE</columns>
         <columns>CONTACT.PHONE1</columns>
